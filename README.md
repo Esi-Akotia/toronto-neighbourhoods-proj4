@@ -5,14 +5,15 @@
 ### Summary: 
 
 This project is examining data from the City of Toronto to identify key attributes of neighbourhoods/municipalities. The goal of the project is to assist families with young children to make a decision on what will be the most ideal location for them to live/raise children based on these variables:
-School accessibility, type, and location
-Types of parks & recreation facilities
-Neighbourhood crime rates
+- School accessibility, type, and location
+- Types of parks & recreation facilities
+- Neighbourhood crime rates
 
 Project outcomes: 
 
-Conduct an exploratory analysis of the attributes above to gain a clear understanding of the layout of each municipality
-Create an overlay map / multiple maps of the Toronto neighbourhoods to show these 3 variables with dropdown menus that update the map based on the 3 factors
+- Conduct an exploratory analysis of the attributes above to gain a clear understanding of the layout of each municipality
+- Create an overlay map / multiple maps of the Toronto neighbourhoods to show these 3 variables with dropdown menus that update the map based on the 3 factors
+- Unse machine learning to predict the future crime rates in each neigbhourhood
 
 ### Questions to answer:
 
@@ -20,6 +21,7 @@ Exploratory
 - How are crime rates changing over the years in the neighbourhoods from 2014 to 2023?
 - What can we learn about people’s hobbies by looking at the amenities?
 - How many different types of schools are in the municipalities?
+- What are the predicted crime rates for the neighbourhoods for next year?
 
 Mapping
 - Which areas/neighbourhoods are the best for families with young children to live based on these metrics?:
