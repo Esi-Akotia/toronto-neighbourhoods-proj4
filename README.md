@@ -13,7 +13,7 @@ Project outcomes:
 
 - Conduct an exploratory analysis of the attributes above to gain a clear understanding of the layout of each municipality
 - Create an overlay map / multiple maps of the Toronto neighbourhoods to show these 3 variables with dropdown menus that update the map based on the 3 factors
-- Unse machine learning to predict the future crime rates in each neigbhourhood
+- Use unsupervised machine learning to predict the future crime rates in each neigbhourhood
 
 ### Questions to answer:
 
