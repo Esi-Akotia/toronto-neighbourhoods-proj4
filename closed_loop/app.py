@@ -21,6 +21,14 @@ schcount_collection = db['schoolcountcsv']
 def index():
     return render_template('index.html')
 
+@app.route('/charts')
+def charts():
+    return render_template('charts.html')
+
+@app.route('/map')
+def map():
+    return render_template('map.html')
+
 @app.route('/crimedata')
 def crimedata():
     # Fetch the GeoJSON data from MongoDB's crime collection
