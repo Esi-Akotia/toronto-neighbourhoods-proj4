@@ -74,5 +74,9 @@ def schcountdata():
     return schcount_data_json
 
 
+@app.route("/machinelearning")
+def machinelearning():
+    return render_template("machinelearning.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
