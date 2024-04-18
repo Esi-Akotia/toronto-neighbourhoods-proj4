@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crime Forcasting by Neighborhood</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .chart-container {
+            padding: 20px;
+        }
+        img {
+            width: 100%; /* Scale image to container width */
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">Neighborhood Crime Forcasting</h1>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <select id="neighborhoodDropdown" class="form-control my-3">
+                    <option value="">Select a Neighborhood</option>
+                    <option value="Agincourt">Agincourt</option>
+                    <option value="Annex">Annex</option>
+                    <option value="Glenfield-Jane Heights">Glenfield-Jane Heights</option>
+                    <option value="Mount Olive-Silverstone-Jamestown">Mount Olive-Silverstone-Jamestown</option>
+                    <!-- We will add more here if needed -->
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 chart-container">
+                <img id="crimeChartHomicide" src="" alt="Homicide Prediction Chart" style="display:none;">
+            </div>
+            <div class="col-md-6 chart-container">
+                <img id="crimeChartAssault" src="" alt="Assault Prediction Chart" style="display:none;">
+            </div>
+            <div class="col-md-6 chart-container">
+                <img id="crimeChartTheft" src="" alt="Theft Prediction Chart" style="display:none;">
+            </div>
+            <div class="col-md-6 chart-container">
+                <img id="crimeChartRobbery" src="" alt="Robbery Prediction Chart" style="display:none;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('neighborhoodDropdown').addEventListener('change', function() {
+    var neighborhood = this.value;
+    var crimeTypes = ["homicide", "assault", "theft", "robbery"]; // Array of crime types
+    if (neighborhood) {
+        var formattedNeighborhood = neighborhood.replace(/ /g, "_"); // Replace spaces with underscores for filenames
+        crimeTypes.forEach(function(crimeType) {
+            var imagePath = '/images/' + formattedNeighborhood + '_' + crimeType + '.png'; // Updated path here
+            var imgElement = document.getElementById('crimeChart' + crimeType.charAt(0).toUpperCase() + crimeType.slice(1));
+            imgElement.src = imagePath;
+            imgElement.style.display = 'block'; // Show the image when a neighborhood is selected
+        });
+    } else {
+        crimeTypes.forEach(function(crimeType) {
+            document.getElementById('crimeChart' + crimeType.charAt(0).toUpperCase() + crimeType.slice(1)).style.display = 'none'; // Hide the image if no neighborhood is selected
+        });
+    }
+});
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
