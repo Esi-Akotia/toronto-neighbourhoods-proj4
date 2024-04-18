@@ -78,5 +78,9 @@ def schcountdata():
 def machinelearning():
     return render_template("machinelearning.html")
 
+@app.route("/tableau")
+def tableau():
+    return render_template("tableau.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
