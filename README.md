@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 
-This project is examining data from the City of Toronto to identify key attributes of neighbourhoods/municipalities. The goal of the project is to assist families with young children to make a decision on what will be the most ideal location for them to live/raise children based on these variables:
+This project is examining data from the City of Toronto to identify key attributes of neighbourhoods/municipalities. The goal of the project is to assist families to make a decision on what will be the most ideal location for them to live/raise children based on these variables:
 - School accessibility, type, and location
 - Types of parks & recreation facilities
 - Neighbourhood crime rates
@@ -13,14 +13,14 @@ This project is examining data from the City of Toronto to identify key attribut
 
 - How are crime rates changing over the years in the neighbourhoods from 2019 to 2023?
 - How many different types of schools are in the municipalities?
-- What are the predicted crime rates for the neighbourhoods for next year?
+- What are the predicted crime rates for the neighbourhoods for next 2 yearS?
 
 #### Mapping
 
-- Which areas/neighbourhoods are the best for families with young children to live based on these metrics?:
-- Crime rate
-- School type: Public vs Private
-- Parks & recreation - amenities
+- Which neighbourhoods are the best for families with young children to live based on these metrics?:
+- Crime Rate
+- School Type: Public vs Private
+- Parks & Recreation - Amenities
 
 ## METHODOLOGY
 
@@ -43,7 +43,7 @@ We used a machine learning forecasting model to predict selected crime types' ra
 3. Homicide
 4. Robbery
 
-The model we used for this is Facebook Prophet model (link to the documentation in the below resources section). This model was utilized to analyze the crime data from 2019 to 2023 to predict 2024 and 2025 rates. Then we created the visualization figures that we later used on our `machinelearning` endpoint. 
+The model we used for this is Facebook Prophet (link to the documentation in the below resources section). This model was utilized to analyze the crime data from 2019 to 2023 to predict 2024 and 2025 rates. Then we created the visualization figures that we later used on our `machinelearning` endpoint. 
 
 #### code snippet
 
