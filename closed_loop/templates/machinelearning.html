@@ -9,9 +9,12 @@
             padding: 20px;
         }
         img {
-            width: 100%; /* Scale image to container width */
+            max-width: 610px; 
+            width: auto; /* Adjust width as desired, keeping it responsive */
+            
             height: auto;
             margin-top: 20px;
+            margin-right: 20px;
         }
     </style>
 </head>
@@ -22,8 +25,9 @@
             <div class="col-md-6 offset-md-3">
                 <select id="neighborhoodDropdown" class="form-control my-3">
                     <option value="">Select a Neighborhood</option>
-                    <option value="Agincourt">Agincourt</option>
+                    <option value="Harbourfront-CityPlace">Harbourfront-CityPlace</option>
                     <option value="Annex">Annex</option>
+                    <option value="West Humber-Clairville">West Humber-Clairville</option>
                     <option value="Glenfield-Jane Heights">Glenfield-Jane Heights</option>
                     <option value="Mount Olive-Silverstone-Jamestown">Mount Olive-Silverstone-Jamestown</option>
                     <!-- We will add more here if needed -->
@@ -38,7 +42,7 @@
                 <img id="crimeChartAssault" src="" alt="Assault Prediction Chart" style="display:none;">
             </div>
             <div class="col-md-6 chart-container">
-                <img id="crimeChartTheft" src="" alt="Theft Prediction Chart" style="display:none;">
+                <img id="crimeChartAutotheft" src="" alt="Autotheft Prediction Chart" style="display:none;">
             </div>
             <div class="col-md-6 chart-container">
                 <img id="crimeChartRobbery" src="" alt="Robbery Prediction Chart" style="display:none;">
@@ -47,23 +51,30 @@
     </div>
 
     <script>
-        document.getElementById('neighborhoodDropdown').addEventListener('change', function() {
+    document.getElementById('neighborhoodDropdown').addEventListener('change', function() {
     var neighborhood = this.value;
-    var crimeTypes = ["homicide", "assault", "theft", "robbery"]; // Array of crime types
+    var crimeTypes = ["homicide", "assault", "autotheft", "robbery"];
     if (neighborhood) {
-        var formattedNeighborhood = neighborhood.replace(/ /g, "_"); // Replace spaces with underscores for filenames
+        // var formattedNeighborhood = neighborhood.replace(/ /g, '_');
         crimeTypes.forEach(function(crimeType) {
-            var imagePath = '/images/' + formattedNeighborhood + '_' + crimeType + '.png'; // Updated path here
-            var imgElement = document.getElementById('crimeChart' + crimeType.charAt(0).toUpperCase() + crimeType.slice(1));
-            imgElement.src = imagePath;
-            imgElement.style.display = 'block'; // Show the image when a neighborhood is selected
+            var imgElementId = 'crimeChart' + crimeType.charAt(0).toUpperCase() + crimeType.slice(1);
+            var imgElement = document.getElementById(imgElementId);
+            if (imgElement) {
+                var imagePath = '/static/images/' + neighborhood + '_' +crimeType+'.png';
+                imgElement.src = imagePath;
+                imgElement.style.display = 'block';
+            }
         });
     } else {
         crimeTypes.forEach(function(crimeType) {
-            document.getElementById('crimeChart' + crimeType.charAt(0).toUpperCase() + crimeType.slice(1)).style.display = 'none'; // Hide the image if no neighborhood is selected
+            var imgElement = document.getElementById('crimeChart' + crimeType.charAt(0).toUpperCase() + crimeType.slice(1));
+            if (imgElement) {
+                imgElement.style.display = 'none';
+            }
         });
     }
 });
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
