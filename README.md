@@ -13,7 +13,7 @@ This project is examining data from the City of Toronto to identify key attribut
 
 - How are crime rates changing over the years in the neighbourhoods from 2019 to 2023?
 - How many different types of schools are in the municipalities?
-- What are the predicted crime rates for the neighbourhoods for next 2 yearS?
+- What are the predicted crime rates for the neighbourhoods for next 2 years?
 
 #### Mapping
 
