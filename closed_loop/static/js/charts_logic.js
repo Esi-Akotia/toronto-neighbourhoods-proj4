@@ -99,7 +99,8 @@ document.getElementById('Neighbourhood').addEventListener('change', function() {
             const populationDisplay = document.getElementById('populationDisplay'); // Ensure you have this ID in your HTML
             if (populationDisplay) {
                 populationDisplay.textContent = `Chosen Neighborhood Population: ${population}`;
-                populationDisplay.style.fontSize = '68px'; // Display in big fonts as requested
+                populationDisplay.style.fontSize = '48px'; // Display in big fonts as requested
+                // population.style.color = "red"; 
             }
         });
 });
