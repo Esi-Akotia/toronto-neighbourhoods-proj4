@@ -99,7 +99,7 @@ Our crime data was once again used to create a different variation of visualizat
 
 ## ANALYSIS
 
-[PUT WHAT WE CAN LEARN FROM THE VISUALIZATION HERE]
+The purpose of this project is to provide an interactive platform where users can discover what their ideal neighbourhood is, and make a decision based on the available data. By using the map, charts, forecast, and interactive tableau, users can apply filters, make visual comparisons, and ultimately choose where they want to live based on availability of schools and parks, and the likelihood of crime occurence.
 
 ## TEAM MEMBERS
 
