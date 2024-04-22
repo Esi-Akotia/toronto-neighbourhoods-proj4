@@ -4,15 +4,15 @@ body, html {
     margin:0;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-image: url('https://vastphotos.com/files/uploads/photos/10920/high-resolution-toronto-skyline-l.jpg?v=20220712073521');  
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-section {
+#bootcamp {
     min-height:auto;
     position: relative;
     text-align: center;
     color: rgb(19, 18, 18); 
-    background-image: url('https://vastphotos.com/files/uploads/photos/10920/high-resolution-toronto-skyline-l.jpg?v=20220712073521');  
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100vw;
     height: 100vh;
     display: flex;
