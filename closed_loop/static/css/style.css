@@ -4,15 +4,15 @@ body, html {
     margin:0;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    /* background-image: url('https://vastphotos.com/files/uploads/photos/10920/high-resolution-toronto-skyline-l.jpg?v=20220712073521');  
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
-section {
+#bootcamp {
     min-height:auto;
     position: relative;
     text-align: center;
     color: rgb(19, 18, 18); 
-    background-image: url('https://vastphotos.com/files/uploads/photos/10920/high-resolution-toronto-skyline-l.jpg?v=20220712073521');  
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -31,7 +31,7 @@ section {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-nav {
+/* nav {
     text-align: center;
     width: 85%;
     margin: auto;
@@ -42,7 +42,7 @@ nav h1{
     float: left;   
     line-height: 80px;
     font-size: 25px;
-}
+} */
 
 .bottom-left{
     position: fixed;
@@ -51,11 +51,11 @@ nav h1{
     margin: 20px; /* Adjust margin for better spacing */
 }
 
-nav h2{
+/* nav h2{
     float: right;   
     line-height: 80px;
     font-size: 25px;
-}
+} */
 
 .bottom-right{
     position:fixed;
@@ -64,16 +64,16 @@ nav h2{
     margin: 20px; /* Adjust margin for better spacing */
 }
 
-nav h3{
+/* nav h3{
     text-align: center;
 
-}
+} */
 
 .description{
     text-align: center;
 }
 
-nav ul{
+/* nav ul{
     text-align: center;
     line-height: 70px;
     font-size: 25px;
@@ -84,14 +84,14 @@ nav ul li{
     list-style: none;
     padding: 0px 5 px;
     
-}
+} */
 
-nav ul li a{
-    color: #000000;
+/* nav ul li a{
+    color: #2ac155;
     text-decoration: none;
     border-radius: 5px;
     padding: 7px 8px;
-}
+} */
 
 /*nav ul li a::after{
     content: '';
@@ -108,17 +108,6 @@ nav ul li a:hover{
     background-color: #0d133100;
     transition: 0.5s ease;
 }
-
-
-#map {
-    margin-top: 15px;
-    height: 100vh;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-
-
   
   /*
    * Sidebar
@@ -171,8 +160,8 @@ nav ul li a:hover{
   .navbar-brand {
     padding-top: .75rem;
     padding-bottom: .75rem;
-    background-color: rgba(0, 0, 0, .25);
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0,0);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0);
   }
   
   .navbar .form-control {
@@ -191,14 +180,14 @@ body, html {
     padding-left:0 !important;
 
 }
-#crimeChart {
+ #crimeChart {
     width: 100%; 
     height: 1000px; 
-}
-#crimeLineChart {
+} 
+ #crimeLineChart {
     width: 100%; 
     height: 1000px; 
-}
+} 
 .col-md-10 {
     padding-right: 0 !important;
     padding-left:15px !important;
